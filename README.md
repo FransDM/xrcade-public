@@ -23,6 +23,54 @@ The app talks to the game through the mod’s HTTP API and can be packaged as a 
 
 Open [http://localhost:9520](http://localhost:9520).
 
+version 1.0.2-beta realese-notes:
+# Release notes 1.0.2
+
+## Remote
+- Basic remote support
+- Spatial Ops tab: team-colored player labels with glow and validated icon; compact layout
+- Launch OBS and launch Spatial Ops from remote
+- Remote language updates when app language is changed
+
+## UI & Dashboard
+- Sortable columns on headset list; pin/unpin icon changes on hover
+- Unlicensed: card layout, visibility, and remove-license button styling
+- Mode switch at top left (login/logout no longer tied to mode)
+- Spinners when adding/removing players from match
+- Players card: Add player, Add squad (with icons), and “Add player and add to match” when in lobby/game
+- Team names shown as Blue/Orange instead of Team1/Team2
+- Match settings template dialog: Cancel button; overlay no longer closes dialog when changing settings
+- Operator mode: settings buttons visible but disabled with “Switch to ADMIN-mode to edit settings” tooltip
+- Assets page: indicator when auto-loop is active and scene is about to change
+- Match settings template name change no longer causes slow rerenders
+
+## Spatial Ops
+- Auto-collapse players, headsets, and bots during match
+- Drag-and-drop player squad change
+- Consolidated score during auto-restart; lit-up winning team; correct reset and display (TD/domination/CTF)
+
+## Monitor
+- Score loop ordered oldest → newest for clearer previous/next
+
+## Assignment
+- Preferred headset remembered at match end and when assigned for next match
+
+## Scheduled matches & Orchestrator
+- Revert settings after scheduled match (bot count, team balance, keep teams together, toggle settings)
+- Revert team balancing if orchestrator fails; detect bot add on no-bot path
+- Game mode / auto-restart changes trigger scheduled match settings mismatch
+- More efficient match settings application; single map in results starts directly
+- Match settings template apply retry handling fixed
+
+## Settings & data
+- Hall in General settings; orchestrator uses Hall
+- Map list: optional alphabetical sort and filter by arena
+- Players, headsets, and squads moved to separate JSON file (auto-migration on first run)
+
+## Other
+- Standardized logging; dashboard resilience on first poll failure
+- Missing translations and in-game result-click bug fixed
+
 Version 1.0.1-beta release-notes
 - added support for multiple monitors
 - added monitor modes: Schedule / Game / Scoreboard
