@@ -4,6 +4,8 @@ Admin application for location-based entertainment (LBE) VR venues. Use it to mo
 
 **Author:** XRcade Belgium
 
+Current version: v1.0.2
+
 ---
 
 ## What It Does
